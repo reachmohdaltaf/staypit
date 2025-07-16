@@ -1,1 +1,1 @@
-# StayPit
+# StayPit - COOL😎
