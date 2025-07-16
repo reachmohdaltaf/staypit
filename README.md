@@ -1,1 +1,1 @@
-# StayPit - COOL😎
+# StayPit - A very cool app
