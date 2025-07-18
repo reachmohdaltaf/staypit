@@ -1,9 +1,20 @@
-import React from 'react'
+"use client";
+import { useSession } from "next-auth/react";
+import LoginButton from "@/components/login-button";
+import LogoutButton from "@/components/logout-button";
 
 const Home = () => {
-  return (
-    <div>dsfsdfdsf</div>
-  )
-}
+  const { data: session, status } = useSession();
 
-export default Home
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+     
+    </div>
+  );
+};
+
+export default Home;
