@@ -12,7 +12,15 @@ const Home = () => {
 
   return (
     <div>
-     
+      
+      <div className="">
+         <div>
+
+         </div>
+         <div>
+
+         </div>
+      </div>
     </div>
   );
 };
