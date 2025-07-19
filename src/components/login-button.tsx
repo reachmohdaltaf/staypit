@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 export default function LoginButton() {
   return (
     <Button
-      onClick={() => signIn("google", { callbackUrl: "/onboarding" })}
+      onClick={() => signIn("google", { callbackUrl: "/" })}
       className="w-full flex items-center justify-center gap-2 bg-white border border-gray-300 hover:bg-gray-50 rounded-md py-2 text-sm font-semibold text-gray-700 shadow-sm transition duration-150"
     >
       <svg height="20" width="20" viewBox="0 0 48 48">

@@ -22,6 +22,7 @@ function Header() {
   return (
     <div className="flex px-10 sm:px-20 lg:px-30 border font-poppins justify-between py-6">
       <div className="flex justify-center items-center gap-2">
+        {/* <Image src={"/logo.png"} alt="Logo" height={40} width={40} /> */}
         <h1 className="font-bold text-[25px]">Staypit</h1>
       </div>
 
@@ -30,7 +31,6 @@ function Header() {
           <h3 className="border-r pr-2 pl-3">Location</h3>
           <h3 className="border-r px-2">Check In</h3>
           <h3 className="pl-2">Add guests</h3>
-
           <div className="bg-primary rounded-full p-2">
             <SearchIcon className="text-white" height={15} width={15} />
           </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 function OnboardingPage() {
@@ -17,7 +18,9 @@ function OnboardingPage() {
           Start your search
         </button>
       </div>
-      <div className="w-[50%]"></div>
+      <div className=" md:w-[50%] py-3">
+        <Image src={"/images.png"} alt="Onboarding Image" height={600} width={600} />
+      </div>
     </div>
   );
 }
