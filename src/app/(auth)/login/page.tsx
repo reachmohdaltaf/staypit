@@ -1,36 +1,66 @@
-import React from 'react';
-import LoginButton from '@/components/login-button';
+import { Button } from "@/components/ui/button"
 
-function LoginPage() {
+const Login = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted p-4 md:pb-[100px]">
-      <div className="bg-card border shadow-2xl rounded-2xl p-8 w-full max-w-md text-center relative overflow-hidden">
-        {/* Decorative gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 pointer-events-none" />
-        
-        <div className="relative z-10">
-          <div className="mb-8">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
-              <svg className="w-8 h-8 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-            </div>
-            <h1 className="text-3xl font-bold mb-2 text-foreground">Welcome back</h1>
-            <p className="text-muted-foreground">Sign in to continue to StayPit</p>
+    <div className="flex flex-col items-center justify-center pt-10">
+      <h1 className="text-4xl">Login</h1>
+
+      <div className="mt-10 flex items-center flex-col text-center w-full max-w-sm">
+        {/* Social Login Buttons */}
+        <div className="flex flex-col gap-2 items-center w-full">
+          <Button className="text-sm tracking-wide flex  gap-6 w-fit justify-center" variant={"outline"}>
+            <img
+              src="https://www.gstatic.com/marketing-cms/assets/images/d5/dc/cfe9ce8b4425b410b49b7f2dd3f3/g.webp=s96-fcrop64=1,00000000ffffffff-rw"
+              className="w-5 h-5"
+              alt=""
+            />
+            Continue with Google
+          </Button>
+        </div>
+
+        {/* Divider */}
+        <div className="mt-1">
+          <p className="text-sm">or</p>
+        </div>
+
+        {/* Login Form */}
+        <form className="flex gap-4 flex-col text-start w-full">
+          <div className="flex flex-col">
+            <label htmlFor="email" className="px-2 text-sm">
+              Email Address
+            </label>
+            <input
+              type="text"
+              id="email"
+              className="p-2 rounded-2xl border border-gray-300"
+              placeholder="example@domain.com"
+            />
           </div>
-          
-          <LoginButton />
-          
-          <p className="mt-8 text-xs text-muted-foreground leading-relaxed">
-            By signing in, you agree to our{' '}
-            <span className="text-primary hover:underline cursor-pointer font-medium">Terms</span>{' '}
-            and{' '}
-            <span className="text-primary hover:underline cursor-pointer font-medium">Privacy Policy</span>.
-          </p>
+
+          <div className="flex flex-col">
+            <label htmlFor="password" className="px-2 flex justify-between text-sm">
+              <p>Password</p>
+              <span className="underline">Forgot Password?</span>
+            </label>
+            <input
+              type="password"
+              id="password"
+              className="p-2 rounded-2xl border border-gray-300"
+              placeholder="password"
+            />
+          </div>
+
+          <Button className="w-full">Login</Button>
+        </form>
+
+        {/* Signup Link */}
+        <div className="mt-6 flex items-center gap-3">
+          <p>Don&apos;t have an account?</p>
+          <p className="underline">Sign Up</p>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default LoginPage;
+export default Login
