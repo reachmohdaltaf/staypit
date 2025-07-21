@@ -106,7 +106,7 @@ const PublicNavbar = () => {
      
         <div className="gap-3 text-gray-600  flex items-center  h-full">
         
-        <Button variant={''}>Login</Button>
+        <Button>Login</Button>
         {/* <Button>Sign Up</Button> */}
          
 

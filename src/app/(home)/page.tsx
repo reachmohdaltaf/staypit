@@ -32,7 +32,7 @@ const Home = () => {
               Accompanying us, you have a trip full of experiences. With
               Chisfis, booking accommodation, resort villas, hotels
             </span>
-            <Button size={""} className="mt-6  p-6 w-44">
+            <Button  className="mt-6  p-6 w-44">
               Search Now
             </Button>
           </div>

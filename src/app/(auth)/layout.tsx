@@ -1,6 +1,6 @@
 import PublicNavbar from "@/components/layout/PublicNavbar"
 
-const LoginLayout = ({children}) => {
+const LoginLayout = ({children}:{children: React.ReactNode}) => {
   return (
     <div>
       <div className="fixed top-0 z-50 left-0 right-0">
