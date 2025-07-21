@@ -96,7 +96,7 @@ const PrivateNavbar = () => {
       </Link>
 
       <div className="right-side text-gray-600 flex items-center  gap-2 h-full">
-        <NavigationMenu>
+        <NavigationMenu className="lg:flex hidden">
           <NavigationMenuList>
             {navItems.map((item, index) => (
               <NavigationMenuItem className="cursor-pointer" key={index}>
