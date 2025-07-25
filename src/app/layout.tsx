@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Providers from "@/components/session-provider";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/layout/PrivateNavbar";
+import { Providers } from "./Provider";
+import { Suspense } from "react";
+import Loading from "@/components/Loading";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,14 +30,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased hideScrollBar`}
       >
+                <Providers>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem={false}
           disableTransitionOnChange
         >
-          <Providers>{children}</Providers>
+         
+          {children}
+        
         </ThemeProvider>
+        </Providers>
+
       </body>
     </html>
   );
