@@ -1,14 +1,8 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { useSession } from "next-auth/react";
 import Image from "next/image";
 
-const Home = () => {
-  const { data: session, status } = useSession();
-
-  if (status === "loading") {
-    return <div>Loading...</div>;
-  }
+const DashBoardPage = () => {
 
   return (
     <div className="relative ">
@@ -60,4 +54,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default DashBoardPage;
